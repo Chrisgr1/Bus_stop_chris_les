@@ -11,5 +11,12 @@ class Bus:
     def passenger_count(self):
         return len(self.passengers)
 
-    def pick_up_passenger(self, person):
-        self.bus_stop.queue.pop(person)
+    def pick_up(self, person):
+        self.passengers.append(person)
+
+    def drop_off(self, person):
+        self.passengers.remove(person)
+        return len(self.passengers)
+
+    def empty(self):
+        self.passengers = []
