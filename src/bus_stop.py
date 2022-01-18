@@ -5,5 +5,5 @@ class BusStop:
 
     def add_to_queue(self, person):
         self.queue.append(person)
-        
+
 
